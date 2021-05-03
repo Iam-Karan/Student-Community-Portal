@@ -844,6 +844,8 @@ li{
 .dev-image{
   border-radius: 50%;
   height: 250px;
+  width: 250px;
+  object-fit: cover;
 }
 .about-container p{
   margin-left: 20%;
