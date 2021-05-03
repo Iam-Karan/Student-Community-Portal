@@ -7,9 +7,14 @@ const finalMessage = document.getElementById("final-message");
 const figureParts = document.querySelectorAll(".figure-part");
 
 const words = [
-  "hello", 
-  "morning",
-  "hi", 
+  "student", 
+  "international",
+  "canada",
+  "appartment", 
+  "blog", 
+  "lawyer", 
+  "opportunity", 
+  "house" 
 ];
 
 let selectword = words[Math.floor(Math.random() * words.length)];
