@@ -975,12 +975,54 @@ li{
 .popup button:focus{
   outline: 0;
 }
+.hint{
+  margin-top: 100px;
+  margin-left: 50px;
+}
+.hint button{
+  background:#009FFF;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:40px;
+  font-size:1.2em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.hint button:hover{
+  background:#FFF;
+  color:#009FFF;
+}
+.hint button:before,.hint button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #ff0123;
+  transition:400ms ease all;
+}
+.hint button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.hint button:hover:before,.hint button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
 .notification-container{
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px 10px 0 0;
   padding: 15px 20px;
   position: absolute;
-  margin-top: 250px;
+
+  margin-top: 100px;
   opacity: 0;
   z-index: 5;
   transition:  transform 0.3s ease-in;

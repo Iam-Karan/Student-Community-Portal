@@ -5,7 +5,8 @@ const popup = document.getElementById("popup-container");
 const notification = document.getElementById("notification-container");
 const finalMessage = document.getElementById("final-message");
 const figureParts = document.querySelectorAll(".figure-part");
-
+const hintbtn = document.getElementById("hint-btn");
+let counthint = 0;
 const words = [
   "student", 
   "international",
@@ -40,6 +41,12 @@ function displayword(){
   if(innerword === selectword){
     finalMessage.innerText = "Congratulation! You won :)";
     popup.style.display = "flex";
+  }
+}
+
+function hideHint(){
+  if(counthint >= 3){
+    hintbtn.style.display = "none";
   }
 }
 
@@ -95,6 +102,7 @@ window.addEventListener("keydown", (e) => {
       if(!correctLetters.includes(letter)){
         correctLetters.push(letter);
         displayword();
+        hideHint();
       }
       else{
         shownotification();
@@ -115,9 +123,26 @@ playAgain.addEventListener("click", () => {
   correctLetters.splice(0);
   wrongLetters.splice(0);
   selectword = words[Math.floor(Math.random() * words.length)];
+  counthint = 0;
   displayword();
   updateWrongLetters();
   popup.style.display = "none"; 
 });
+
+
+function addhint(){
+  counthint++;
+  hintbtn.innerText = "Hint ("+ (3 - counthint) + ")";
+  let ran = Math.floor(Math.random() * (selectword.length - 1)) + 1;
+  let ranchar = selectword.charAt(ran);
+  if(!correctLetters.includes(ranchar)){
+    correctLetters.push(ranchar);
+    displayword();
+    hideHint();
+  }
+  else{
+    addhint();
+  }
+}
 
 displayword();
