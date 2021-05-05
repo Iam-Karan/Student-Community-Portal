@@ -1,5 +1,6 @@
 const word = document.getElementById("word");
 const worngLetter = document.getElementById("wrong-letter");
+const scoreLetter = document.getElementById("score-letter");
 const playAgain = document.getElementById("play-btn");
 const popup = document.getElementById("popup-container");
 const notification = document.getElementById("notification-container");
@@ -7,6 +8,7 @@ const finalMessage = document.getElementById("final-message");
 const figureParts = document.querySelectorAll(".figure-part");
 const hintbtn = document.getElementById("hint-btn");
 let counthint = 0;
+let score = 0;
 const words = [
   "student", 
   "international",
@@ -101,6 +103,9 @@ window.addEventListener("keydown", (e) => {
       
       if(!correctLetters.includes(letter)){
         correctLetters.push(letter);
+        score = score + 20;
+        scoreLetter.innerHTML = `<p>Score</p>
+                                <span> ${score}</span>`;
         displayword();
         hideHint();
       }
@@ -112,6 +117,9 @@ window.addEventListener("keydown", (e) => {
     else{
       if(!wrongLetters.includes(letter)){
         wrongLetters.push(letter);
+        score = score - 10;
+        scoreLetter.innerHTML = `<p>Score</p>
+                                <span> ${score}</span>`;
         updateWrongLetters();
       }
     }
@@ -123,7 +131,9 @@ playAgain.addEventListener("click", () => {
   correctLetters.splice(0);
   wrongLetters.splice(0);
   selectword = words[Math.floor(Math.random() * words.length)];
+  score = 0;
   counthint = 0;
+  scoreLetter.innerHTML = "";
   displayword();
   updateWrongLetters();
   popup.style.display = "none"; 

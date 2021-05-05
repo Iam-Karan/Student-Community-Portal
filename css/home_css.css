@@ -558,7 +558,6 @@ li{
 }
 .res-housecard-images{
   grid-area: images;
-  background: url(../assets/image/oneimage.jpg);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
@@ -593,7 +592,7 @@ li{
   border-bottom-right-radius: 15px;
   background: #ff0123;
 }
-.res-housecard-stats .stat{
+.res-housecard-stats .res-stat{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -993,6 +992,20 @@ li{
 .wrong-letters-container span{
   font-size: 24px;
 }
+.score-container{
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  display: f;
+  flex-direction: column;
+  text-align: right;
+}
+.score-container p{
+  margin: 0 0 5px;
+}
+.score-container span{
+  font-size: 24px;
+}
 .word{
   display: flex;
   position: absolute;
@@ -1101,4 +1114,180 @@ li{
 .notification-container.play{
   opacity: 100;
   transform: translateY(-57px);
+}
+
+/*house details*/
+.house-detail-page{
+  background-image: linear-gradient(to Right, #000428, #004e92);
+}
+.house-details{
+    padding-top: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.house-details img{
+    width: 100%;
+    display: block;
+}
+.house-details .img-display{
+    overflow: hidden;
+}
+.house-details .img-showcase{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.img-showcase img{
+    min-width: 100%;
+}
+.img-select{
+    display: flex;
+}
+.img-item{
+    margin: 0.3rem;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3){
+    margin-right: 0;
+}
+.img-item:hover{
+    opacity: 0.8;
+}
+.house-content{
+    padding: 2rem 1rem;
+}
+.house-title{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    color: #fff;
+    margin: 1rem 0;
+}
+.house-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+    background: #fff;
+}
+.house-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    background: #256eff;
+    color: #fff;
+    padding: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+.house-link:hover{
+    opacity: 0.9;
+}
+.house-rating{
+    color: #ffc107;
+}
+.house-rating span{
+    font-weight: 600;
+    color: #fff;
+}
+.house-price{
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.house-price p{
+  color: #fff;
+}
+.house-price span{
+    font-weight: 400;
+    color: #fff;
+}
+.last-price span{
+    color: #f64749;
+    text-decoration: line-through;
+}
+.new-price span{
+    color: #256eff;
+}
+.chose-house-detail h2{
+    text-transform: capitalize;
+    color: #fff;
+    padding-bottom: 0.6rem;
+}
+.chose-house-detail p{
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+    color: #fff;
+}
+.chose-house-detail ul{
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #fff;
+}
+.chose-house-detail ul li{
+    margin: 0;
+    list-style: none;
+    color: #fff;
+    background-size: 18px;
+    padding-left: 1.7rem;
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.chose-house-detail ul li span{
+    font-weight: 400;
+}
+.social-links{
+    display: flex;
+    align-items: center;
+}
+.social-links p{
+  color: #fff;
+}
+.social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.5s ease;
+}
+.social-links a:hover{
+    background: #fff;
+    border-color: transparent;
+    color: #256eff;
+}
+@media screen and (min-width: 992px){
+  .house-details-card{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1.5rem;
+  }
+  .house-details{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .product-imgs{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  .house-content{
+      padding-top: 0;
+  }
 }
