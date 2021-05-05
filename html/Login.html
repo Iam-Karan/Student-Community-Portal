@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/home_css.css">
+  <title>login</title>
+</head>
+<body>
+  
+  <header class="sticky">
+    <a href="Home.html" class="logo"> Student <span>Community</span> Portal</a>
+    <ul class="navbar">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="Resources.html">Resources</a></li>
+      <li><a href="Login.html">Login / Sign UP</a></li>
+      <li><a href="About_us.html">About US</a></li>
+      <li><a href="Hangman.html">Hangman</a></li>
+    </ul>
+  </header>
+  
+  <section class="login-section">
+    <div class="login-imgBg">
+      <img src="../assets/image/loginbg.jpg" width="100%" height="100%">
+    </div>
+    <div class="login-contentbox" id="login-frmlogin">
+       <div class="login-formbox">
+         <h2>Login</h2>
+         <form>
+           <div class="login-inputbox">
+             <span>Email id</span>
+             <input type="text" name="">
+           </div>
+           <div class="login-inputbox">
+            <span>Password</span>
+            <input type="password" name="">
+          </div>
+          <div class="login-rememberme">
+            <label><input type="checkbox" name=""> Remember me</label>
+          </div>
+          <div class="login-inputbox">
+            <input type="Submit" value="Sign in" name="">
+          </div>
+          <div class="login-inputbox">
+            <p>Don't have account? <u class="login-btnSignup" onclick="return signup();">Sign UP</u>
+            </p>
+          </div>
+         </form>
+       </div>
+    </div>
+
+    <div class="login-contentbox" id="login-frmsignup">
+      <div class="login-formbox">
+        <h2>Sign Up</h2>
+        <form>
+          <div class="login-inputbox">
+            <span>Name</span>
+            <input type="text" name="">
+          </div>
+          <div class="login-inputbox">
+            <span>Email id</span>
+            <input type="email" name="">
+          </div>
+          <div class="login-inputbox">
+            <span>Mobile no</span>
+            <input type="number" name="">
+          </div>
+          <div class="login-inputbox">
+           <span>Password</span>
+           <input type="password" name="">
+         </div>
+         <div class="login-inputbox">
+          <span>Confirm Password</span>
+          <input type="password" name="">
+        </div>
+         <div class="login-inputbox">
+           <input type="Submit" value="Sign up" name="">
+         </div>
+         <div class="login-inputbox">
+           <p>Already have an account? <u class="login-btnSignup" onclick="return login();">Login</u>
+           </p>
+         </div>
+        </form>
+      </div>
+   </div>
+  </section>
+  <script src="../javascript/login.js"></script>
+</body>
+</html>

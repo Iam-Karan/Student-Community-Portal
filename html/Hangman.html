@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/home_css.css">
+  <script src="../javascript/navbar.js"></script>
+  <title>Hangman</title>
+</head>
+<body>
+  <header>
+    <a href="Home.html" class="logo"> Student <span>Community</span> Portal</a>
+    <ul class="navbar">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="Resources.html">Resources</a></li>
+      <li><a href="Login.html">Login / Sign UP</a></li>
+      <li><a href="About_us.html">About US</a></li>
+      <li><a href="Hangman.html">Hangman</a></li>
+    </ul>
+  </header>
+
+  <div class="hangman-container">
+    <h1>Hangman</h1>
+    <p>Find the Hidden world or die</p>
+
+    <div class="game-conatainer">
+      <svg height="250" width="200" class="figure-container">
+         
+        <line x1 = "60" y1 = "20" x2 = "140" y2 = "20"/>
+        <line x1 = "140" y1 = "20" x2 = "140" y2 = "50"/>
+        <line x1 = "60" y1 = "20" x2 = "60" y2 = "230"/>
+        <line x1 = "20" y1 = "230" x2 = "100" y2 = "230"/>
+
+        <circle cx="140" cy="70" r="20" class="figure-part"/>
+         
+        <line x1 = "140" y1 = "90" x2 = "140" y2 = "150" class="figure-part"/>
+        <line x1 = "140" y1 = "120" x2 = "120" y2 = "100" class="figure-part"/>
+        <line x1 = "140" y1 = "120" x2 = "160" y2 = "100" class="figure-part"/>
+        <line x1 = "140" y1 = "150" x2 = "120" y2 = "180" class="figure-part"/>
+        <line x1 = "140" y1 = "150" x2 = "160" y2 = "180" class="figure-part"/> 
+
+      </svg>
+
+      <div class="wrong-letters-container">
+        <div id="wrong-letter">
+        </div>
+      </div>
+
+      <div class="score-container">
+        <div id="score-letter">
+        </div>
+      </div>
+
+      <div class="word" id="word">
+      </div>
+
+      <div class="hint" id="hint">
+        <button id="hint-btn" onclick="return addhint();">Hint (3)</button>
+      </div>
+      <div class="popup-container" id="popup-container">
+        <div class="popup">
+          <h2 class="final-message" id="final-message">
+            You have Won
+          </h2>
+          <button id="play-btn">
+            Play Again
+          </button>
+        </div>
+      </div>
+
+      <div class="notification-container" id="notification-container">
+        <p>You Have Already entered this letter</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../javascript/hangman.js"></script>
+
+</body>
+</html>
