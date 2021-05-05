@@ -122,6 +122,9 @@ window.addEventListener("keydown", (e) => {
                                 <span> ${score}</span>`;
         updateWrongLetters();
       }
+      else{
+        shownotification();
+      }
     }
   
   }

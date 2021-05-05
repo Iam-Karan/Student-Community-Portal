@@ -23,7 +23,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 00.5s;
+  transition: 0.5s;
 }
 header.sticky{
   background: #fff;
@@ -90,7 +90,6 @@ footer{
   color: #fff;
   font-size: 1.8rem;
   font-weight: 400;
-  text-transform: capitalize;
   line-height: 3rem;
 }
 .footer-content p{
@@ -981,7 +980,7 @@ li{
   position: absolute;
   top: 20px;
   right: 20px;
-  display: f;
+  display: flex;
   flex-direction: column;
   text-align: right;
 }
